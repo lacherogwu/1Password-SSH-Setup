@@ -1,7 +1,9 @@
 # 1Password SSH Setup
 
-This is a helper tool to setup your SSH keys from 1Password if you have more than six private keys.
-why exactly 6? keep reading...
+This is a helper tool to setup your SSH keys from 1Password if you have <u>more than six</u> private keys.
+
+[why exactly 6?](#why-exactly-6)
+
 ![preview](assets/preview.gif)
 
 ## How to use?
