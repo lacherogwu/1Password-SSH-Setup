@@ -2,6 +2,7 @@
 
 This is a helper tool to setup your SSH keys from 1Password if you have more than six private keys.
 why exactly 6? keep reading...
+![preview](assets/preview.gif)
 
 ## How to use?
 
@@ -21,7 +22,7 @@ The file will be moved to `~/.ssh/{NAME}` and it will append mapping to your `~/
 ## How to connect to your server via SSH using 1Password?
 
 1. Add the private key to your 1Password
-   ![SSH Key item](images/1password-ssh-key-item.png)
+   ![SSH Key item](assets/1password-ssh-key-item.png)
 2. Add new login item with `name` and `website`
 
 - the username will be used just as an identifier
