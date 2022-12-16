@@ -13,4 +13,4 @@ The file will be moved to `~/.ssh/{NAME}` and it will append mapping to your `~/
 
 ## Recommendations
 
-- Set the executeable in the `/bin` directory to you can run it straight from your terminal typing `1p-ssh-setup` in your terminal
+- Set the executeable in the `/usr/local/bin` directory so you can run it straight from your terminal by typing `1p-ssh-setup`
