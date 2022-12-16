@@ -33,11 +33,15 @@ async function movePrivateKey(fileName: string) {
 }
 
 async function addToSSHConfig(host: string, fileName: string) {
-	const file = await Deno.open(`${SSH_DIR}/config`, { append: true, mode: 0o777 });
+	const fileSuffix = Date.now();
+	await Deno.copyFile(`${SSH_DIR}/config`, `${SSH_DIR}/config-${fileSuffix}`);
+	const file = await Deno.open(`${SSH_DIR}/config-${fileSuffix}`, { append: true });
 	const encoder = new TextEncoder();
 	const data = encoder.encode(`\n\nHost ${host}\n  IdentityFile ~/.ssh/${fileName}.pem\n  IdentitiesOnly yes`);
 	await file.write(data);
 	file.close();
+	await Deno.copyFile(`${SSH_DIR}/config-${fileSuffix}`, `${SSH_DIR}/config`);
+	await Deno.remove(`${SSH_DIR}/config-${fileSuffix}`);
 }
 
 function verifyPrivateKeyExists() {

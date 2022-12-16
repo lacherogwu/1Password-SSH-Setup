@@ -10,3 +10,7 @@
 Done!
 
 The file will be moved to `~/.ssh/{NAME}` and it will append mapping to your `~/.ssh/config` file
+
+## Recommendations
+
+- Set the executeable in the `/bin` directory to you can run it straight from your terminal typing `1p-ssh-setup` in your terminal
